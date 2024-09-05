@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-grid label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fill Your Details</h1>
+        <form action="AddMember" method="post">
+            <div class="form-grid">
+                <div>
+                    <label for="id" >ID</label>
+                    <input type="text" id="id" name="id" required>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="palnId">PlanId</label>
+                    <select name="planId" id="planId">
+ 				   <option value="01">01</option>
+  				   <option value="02">02</option>
+  				   <option value="03">03</option>
+                   </select>   				
+                </div>
+                <div>
+                    <label for="trainerId">TrainerId</label>
+                   <select name="trainerId" id="trainerId">
+ 				   <option value="11">11</option>
+  				   <option value="12">12</option>
+  				   <option value="13">13</option>
+                   </select>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+    </div>
+</body>
+</html>
